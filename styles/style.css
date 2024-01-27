@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap");
+
+:root {
+  --primary-color: #d8dfe8;
+  --secondary-color: #9b9797;
+  --terciary-color: #e8e8e8;
+  --quaternary-color: #000000;
+
+  --darkblue-100: #609ed4;
+  --darkblue-200: #356ea9;
+  --darkblue-300: #0a3871;
+  --darkblue-400-thin: #072b61;
+  --darkblue-400-strong: #052051;
+
+  --lightblue-100: #f3f5fc;
+  --lightblue-200: #eff1fa;
+  --lightblue-300: #e9ecf8;
+  --lightblue-400-thin: #aab2d5;
+  --lightblue-400-strong: #757fb2;
+
+  --gray-100: #ced4da;
+  --gray-200: #adb5bd;
+  --gray-300: #868e96;
+  --gray-400: #495057;
+  --gray-500: #343a40;
+
+  --primary-font-family: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--terciary-color);
+}
+
+/* Header */
+.header {
+  padding: 2%;
+}
+
+/* Main */
+.presentation {
+  display: flex;
+  gap: 80px;
+}
+
+.presentation__mainContent {
+  width: 680px;
+}
+
+.presentation__mainContent__text {
+  padding-top: 169px;
+  width: 100%;
+  height: 50vh;
+  background-color: var(--terciary-color);
+  border: none;
+  font-family: var(--primary-font-family);
+  color: var(--darkblue-300);
+  font-weight: 300;
+  font-size: 2rem;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  text-transform: lowercase;
+}
+
+.presentation__mainContent__text::-webkit-input-placeholder {
+  font-family: var(--primary-font-family);
+  color: var(--darkblue-300);
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: initial;
+}
+
+.presentation__mainContent__info {
+  display: flex;
+  gap: 5px;
+}
+
+.presentation__mainContent__info__text {
+  font-family: var(--primary-font-family);
+  font-weight: 100;
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+.presentation__mainContent__buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.presentation__mainContent__buttons__button {
+    padding: 20px 24px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid var(--darkblue-300);
+    border-radius: 20px;
+    font-family: var(--primary-font-family);
+    cursor: pointer;
+}
+
+.button-blue {
+    background-color: var(--darkblue-300);
+    color: var(--terciary-color);
+}
+
+.button-gray {
+    color: var(--darkblue-300);
+}
+
+.presentation__textCryptography, .presentation__textCryptographyAlone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2%;
+    height: 95%;
+    background-color: #FFF;
+    width: 400px;
+    border: 1px solid var(--terciary-color-);
+    border-radius: 20px;
+    margin-top: 2%;
+}
+
+.presentation__textCryptographyAlone {
+    justify-content: flex-start;
+}
+
+.presentation__textCryptography__subTitle {
+    color: var(--gray-500);
+    font-family: var(--primary-font-family);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.presentation__textCryptography__paragraph , .presentation__textCryptography__paragraphAlone {
+    color: var(--gray-400);
+    font-family: var(--primary-font-family);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.presentation__textCryptography__paragraphAlone {
+    text-align: start;
+    font-size: 1.5rem;
+}
