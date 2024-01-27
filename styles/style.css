@@ -34,8 +34,6 @@
 
 body {
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
   background-color: var(--terciary-color);
 }
 
@@ -48,10 +46,12 @@ body {
 .presentation {
   display: flex;
   gap: 80px;
+  box-sizing: border-box;
+  margin-left: 200px;
 }
 
 .presentation__mainContent {
-  width: 680px;
+  width: 150%;
 }
 
 .presentation__mainContent__text {
@@ -91,71 +91,234 @@ body {
 }
 
 .presentation__mainContent__buttons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
 }
 
 .presentation__mainContent__buttons__button {
-    padding: 20px 24px;
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-    border: 1px solid var(--darkblue-300);
-    border-radius: 20px;
-    font-family: var(--primary-font-family);
-    cursor: pointer;
+  padding: 20px 24px;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid var(--darkblue-300);
+  border-radius: 20px;
+  font-family: var(--primary-font-family);
+  cursor: pointer;
 }
 
 .button-blue {
-    background-color: var(--darkblue-300);
-    color: var(--terciary-color);
+  background-color: var(--darkblue-300);
+  color: var(--terciary-color);
 }
 
 .button-gray {
-    color: var(--darkblue-300);
+  color: var(--darkblue-300);
 }
 
-.presentation__textCryptography, .presentation__textCryptographyAlone {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2%;
-    height: 95%;
-    background-color: #FFF;
-    width: 400px;
-    border: 1px solid var(--terciary-color-);
-    border-radius: 20px;
-    margin-top: 2%;
+.presentation__textCryptography,
+.presentation__textCryptographyAlone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+  height: 75vh;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid var(--terciary-color-);
+  border-radius: 20px;
+  margin-top: 2%;
 }
 
 .presentation__textCryptographyAlone {
-    justify-content: flex-start;
+  justify-content: space-between;
 }
 
 .presentation__textCryptography__subTitle {
-    color: var(--gray-500);
-    font-family: var(--primary-font-family);
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-align: center;
+  color: var(--gray-500);
+  font-family: var(--primary-font-family);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
-.presentation__textCryptography__paragraph , .presentation__textCryptography__paragraphAlone {
-    color: var(--gray-400);
-    font-family: var(--primary-font-family);
-    font-size: 1rem;
-    font-weight: 400;
-    text-align: center;
+.presentation__textCryptography__paragraph,
+.presentation__textCryptography__paragraphAlone {
+  color: var(--gray-400);
+  font-family: var(--primary-font-family);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  max-height: 400px;
 }
 
 .presentation__textCryptography__paragraphAlone {
-    text-align: start;
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  white-space: wrap;
+}
+
+.presentation__textCryptography__button {
+  padding: 20px 24px;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid var(--darkblue-300);
+  border-radius: 20px;
+  font-family: var(--primary-font-family);
+  cursor: pointer;
+  margin-bottom: 4%;
+}
+
+.presentation__textCryptography__textArea {
+  /* padding-top: 169px; */
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-family: var(--primary-font-family);
+  color: var(--darkblue-300);
+  font-weight: 300;
+  font-size: 2rem;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  text-transform: lowercase;
+  text-align: start;
+  background-color: #fff;
+}
+
+/* Footer */
+.footer {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: var(--primary-color);
+  align-items: center;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer_list_subtitle {
+  font-family: var(--primary-font-family);
+  color: var(--darkblue-400-strong);
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.footer_list__link {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--primary-font-family);
+  font-size: 1rem;
+  color: var(--darkblue-400-thin);
+  font-weight: 300;
+  text-decoration: none;
+  outline: none;
+}
+
+.footer_list__image {
+  width: 10%;
+}
+
+.footer__paragraph {
+  font-family: var(--primary-font-family);
+  color: var(--darkblue-400-thin);
+  font-weight: 300;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Header */
+  .header {
+    width: 100%;
+  }
+
+  /* Main */
+
+  .presentation {
+    margin-left: 10%;
+    display: flex;
+    gap: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .presentation__mainContent {
+    width: 100%;
+  }
+
+  .presentation__mainContent__text {
+    padding-top: 50px;
+    height: 50vh;
+  }
+
+  .presentation__textCryptography {
+    height: 20vh;
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #encryptImage {
+    display: none;
+  }
+}
+
+@media(max-width: 375px) {
+  /* Header */
+  .header {
+    margin-left: -60px;
+  }
+
+  .presentation__mainContent__text {
+    padding-top: 50px;
+    height: 45vh;
+  }
+
+  .presentation {
+    gap: 20px;
+  }
+
+  .presentation__mainContent__buttons {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .presentation__textCryptography {
+    width: 85%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+  
 }

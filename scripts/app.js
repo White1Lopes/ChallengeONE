@@ -7,21 +7,8 @@ function encryptText() {
   }
 
   let encryptedText = encrypt(textToEncrypt);
-  console.log(encryptedText);
 
-  let image = document.getElementById("encryptImage");
-  image.classList.add("hide");
-
-  let subTitle = document.getElementById("encryptSubtitle");
-  subTitle.classList.add("hide");
-
-  let textCryptography = document.getElementById("textCryptography");
-  textCryptography.classList.add("presentation__textCryptographyAlone");
-
-  let paragraph = document.getElementById("encryptParagraph");
-  console.log(paragraph)
-  paragraph.classList.add("presentation__textCryptography__paragraphAlone");
-  paragraph.innerHTML = encryptedText;
+  showsTextArea(encryptedText);
 }
 
 function decryptText() {
@@ -34,8 +21,10 @@ function decryptText() {
 
   let decryptedText = decrypt(textToEncrypt);
 
-  console.log(decryptedText);
+  showsTextArea(decryptedText);
+}
 
+function showsTextArea(text) {
   let image = document.getElementById("encryptImage");
   image.classList.add("hide");
 
@@ -46,9 +35,24 @@ function decryptText() {
   textCryptography.classList.add("presentation__textCryptographyAlone");
 
   let paragraph = document.getElementById("encryptParagraph");
-  console.log(paragraph)
-  paragraph.classList.add("presentation__textCryptography__paragraphAlone");
-  paragraph.innerHTML = decryptedText;
+  paragraph.classList.add("hide");
+
+  let textAreaCryptography = document.getElementById("cryptgraphyTextArea");
+  textAreaCryptography.classList.add("presentation__textCryptography__paragraphAlone");
+  textAreaCryptography.value = text;
+  textAreaCryptography.classList.remove("hide");
+
+  let clipButton = document.getElementById("copyButton");
+  clipButton.classList.remove("hide");
+}
+
+function copyText() {
+  // Get the text field
+  var copyText = document.getElementById("cryptgraphyTextArea");
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
 }
 
 function encrypt(text) {

@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador de texto</title>
 
-    <link rel="stylesheet" href="styles/style.css">
-    
-
-</head>
-<body>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
     <header class="header">
-        <img src="img/Frame 6.svg" />
+      <img src="img/Frame 6.svg" />
     </header>
 
     <main class="presentation">
-        <section class="presentation__mainContent">
-            <textarea id="encryptTextArea" class="presentation__mainContent__text" placeholder="Digite seu texto"></textarea>
-            <div class="presentation__mainContent__info">
-                <img src="img/icons/bi_exclamation-circle-fill.png">
-                <p class="presentation__mainContent__info__text">
-                    Apenas letras minúsculas e sem acento.</p>
-            </div>
-            <div class="presentation__mainContent__buttons">
-                <span class="presentation__mainContent__buttons__button button-blue"
-                onclick="encryptText()">Criptografar</span>
-                <span class="presentation__mainContent__buttons__button button-gray"
-                onclick="decryptText()">Descriptografar</span>
-            </div>
-        </section>
+      <section class="presentation__mainContent">
+        <textarea
+          id="encryptTextArea"
+          class="presentation__mainContent__text"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <div class="presentation__mainContent__info">
+          <img src="img/icons/bi_exclamation-circle-fill.png" />
+          <p class="presentation__mainContent__info__text">
+            Apenas letras minúsculas e sem acento.
+          </p>
+        </div>
+        <div class="presentation__mainContent__buttons">
+          <span
+            class="presentation__mainContent__buttons__button button-blue"
+            onclick="encryptText()"
+            >Criptografar</span
+          >
+          <span
+            class="presentation__mainContent__buttons__button button-gray"
+            onclick="decryptText()"
+            >Descriptografar</span
+          >
+        </div>
+      </section>
 
-        <section id="textCryptography" class="presentation__textCryptography">
-            <img id="encryptImage" src="img/High quality products 1 1.svg">
-            <h2 id="encryptSubtitle" class="presentation__textCryptography__subTitle">Nenhuma mensagem encontrada</h2>
-            <p id="encryptParagraph" class="presentation__textCryptography__paragraph">Digite um texto que você deseja criptografar ou descriptografar.</p>
-        </section>
+      <section id="textCryptography" class="presentation__textCryptography">
+        <img id="encryptImage" src="img/High quality products 1 1.svg" />
+        <h2
+          id="encryptSubtitle"
+          class="presentation__textCryptography__subTitle"
+        >
+          Nenhuma mensagem encontrada
+        </h2>
+        <p
+          id="encryptParagraph"
+          class="presentation__textCryptography__paragraph"
+        >
+          Digite um texto que você deseja criptografar ou descriptografar.
+        </p>
+        <textarea
+          id="cryptgraphyTextArea"
+          class="presentation__textCryptography__textArea hide"
+          disabled
+        ></textarea>
+        <span
+          id="copyButton"
+          class="presentation__textCryptography__button button-gray hide"
+          onclick="copyText()"
+          >Copiar</span
+        >
+      </section>
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer__list">
+        <h2 class="footer_list_subtitle">Me siga nas redes sociais:</h2>
+        <a
+          href="https://www.linkedin.com/in/luiz-gustavo-l-243016131/"
+          target="_blank"
+          class="footer_list__link"
+        >
+          <img class="footer_list__image" src="img/github-mark.svg" />
+          Linkedin
+        </a>
+
+        <a
+          href="https://github.com/White1Lopes"
+          target="_blank"
+          class="footer_list__link"
+        >
+          <img class="footer_list__image" src="img/github-mark.svg" />
+          Github
+        </a>
+      </div>
+      <p class="footer__paragraph">Desenvolvido por Luiz Gustavo</p>
+    </footer>
 
     <script src="scripts/app.js"></script>
-</body>
+  </body>
 </html>
