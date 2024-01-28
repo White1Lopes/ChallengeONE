@@ -34,7 +34,7 @@
 
 body {
   box-sizing: border-box;
-  background-color: var(--terciary-color);
+  background-color: var(--primary-color);
 }
 
 /* Header */
@@ -59,7 +59,7 @@ body {
 .presentation__mainContent__text {
   width: 100%;
   height: 60vh;
-  background-color: var(--terciary-color);
+  background-color: var(--primary-color);
   border: none;
   font-family: var(--primary-font-family);
   color: var(--darkblue-300);
@@ -139,8 +139,9 @@ body {
 }
 
 .presentation__textCryptographyAlone {
-  justify-content: space-around;
-  gap: 29%;
+  justify-content: space-between;
+  padding-bottom: 5.5%;
+  gap: 7%;
 }
 
 .presentation__textCryptography__subTitle {
@@ -164,7 +165,6 @@ body {
   text-align: center;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  max-height: 400px;
 }
 
 .presentation__textCryptography__paragraphAlone {
@@ -174,9 +174,10 @@ body {
 
 .presentation__textCryptography__button {
   padding: 20px 24px;
-  width: 80%;
+  /* width: 80%; */
   text-align: center;
   margin-left: 2%;
+  margin-right: 2%;
   font-size: 1rem;
   border: 1px solid var(--darkblue-300);
   border-radius: 20px;
@@ -187,13 +188,12 @@ body {
 
 .presentation__textCryptography__textArea {
   width: 100%;
-  height: 60vh;
+  height: 100%;
   border: none;
   font-family: var(--primary-font-family);
   color: var(--darkblue-300);
   font-weight: 300;
-  padding-top: 4%;
-  border-radius: 2rem;
+  margin-top: 8%;
   font-size: 2rem;
   outline: none;
   resize: none;
@@ -211,7 +211,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: #D8DAE8;
   align-items: center;
 }
 
@@ -265,24 +265,16 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Header */
-  .header {
-    width: 100%;
-  }
-
   /* Main */
 
   .presentation {
-    margin-left: 10%;
+    /* margin-left: 10%; */
+    margin-left: 0;
+    padding-left: 6%;
+    padding: 0 6% 0 6%;
+    margin-right: 0;
     display: flex;
-    gap: 80px;
+    gap: 6rem;
     width: 100%;
     box-sizing: border-box;
     flex-direction: column;
@@ -300,10 +292,23 @@ body {
   }
 
   .presentation__textCryptography {
-    height: 20vh;
-    width: 85%;
+    height: 10vh;
+    width: 100%;
     align-items: center;
     justify-content: center;
+    margin-right: 0;
+  }
+
+  .presentation__textCryptographyAlone {
+    justify-content: space-between;
+    height: 40vh;
+    padding: 0 2% 0 2%;
+    padding-bottom: 0;
+    gap: 1rem;
+  }
+
+  .presentation__textCryptography__button {
+    width: 80%;
   }
 
   #encryptImage {
@@ -315,12 +320,7 @@ body {
 
   /* Header */
   .header {
-    margin-left: -60px;
-  }
-
-  .presentation__mainContent__text {
-    padding-top: 50px;
-    height: 45vh;
+    margin-left:-32px;
   }
 
   .presentation {
@@ -333,14 +333,36 @@ body {
   }
 
   .presentation__textCryptography {
-    width: 85%;
+    width: 100%;
+    height: 15vh;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+  }
+
+
+  .presentation__textCryptographyAlone {
+    height: 30vh;
+    /* justify-content: space-between;
+    height: 40vh;
+    padding: 0 2% 0 2%;
+    padding-bottom: 0;
+    gap: 1rem; */
   }
 
   .footer {
     text-align: center;
+  }
+  
+  .footer_list_subtitle {
+    font-size: 1rem;
+  }
+  
+  .footer_list__link {
+    font-size: 0.8rem;
+  }
+  
+  .footer__paragraph {
+    font-size: 0.8rem;
   }
 
 }
