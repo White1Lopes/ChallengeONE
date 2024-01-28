@@ -39,25 +39,26 @@ body {
 
 /* Header */
 .header {
-  padding: 2%;
+  padding: 2% 0 0 2%;
 }
 
 /* Main */
 .presentation {
   display: flex;
-  gap: 80px;
-  box-sizing: border-box;
-  margin-left: 200px;
+  gap: 5rem;
+  margin-left: 16.6%;
 }
 
 .presentation__mainContent {
-  width: 150%;
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .presentation__mainContent__text {
-  padding-top: 169px;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   background-color: var(--terciary-color);
   border: none;
   font-family: var(--primary-font-family);
@@ -78,7 +79,7 @@ body {
   text-transform: initial;
 }
 
-.presentation__mainContent__info {
+.presentation__mainContent__buttons__info {
   display: flex;
   gap: 5px;
 }
@@ -93,10 +94,16 @@ body {
 .presentation__mainContent__buttons {
   margin-top: 10px;
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+  width: auto;
 }
+
+.presentation__mainContent__buttons_division {
+  display: flex;
+  gap: 24px;
+}
+
 
 .presentation__mainContent__buttons__button {
   padding: 20px 24px;
@@ -123,24 +130,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2%;
-  height: 75vh;
   background-color: #fff;
-  width: 100%;
-  border: 1px solid var(--terciary-color-);
-  border-radius: 20px;
-  margin-top: 2%;
+  width: 36%;
+  border: 1px solid var(--terciary-color);
+  border-radius: 2rem;
+  margin-right: 2.5rem;
+  height: 100vh;
 }
 
 .presentation__textCryptographyAlone {
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 29%;
 }
 
 .presentation__textCryptography__subTitle {
   color: var(--gray-500);
   font-family: var(--primary-font-family);
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -169,6 +176,7 @@ body {
   padding: 20px 24px;
   width: 80%;
   text-align: center;
+  margin-left: 2%;
   font-size: 1rem;
   border: 1px solid var(--darkblue-300);
   border-radius: 20px;
@@ -178,13 +186,14 @@ body {
 }
 
 .presentation__textCryptography__textArea {
-  /* padding-top: 169px; */
   width: 100%;
-  height: 100%;
+  height: 60vh;
   border: none;
   font-family: var(--primary-font-family);
   color: var(--darkblue-300);
   font-weight: 300;
+  padding-top: 4%;
+  border-radius: 2rem;
   font-size: 2rem;
   outline: none;
   resize: none;
@@ -196,9 +205,11 @@ body {
 
 /* Footer */
 .footer {
-  margin-top: 10%;
+  position: relative;
+  bottom: 0;
+  margin-top: 2%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   background-color: var(--primary-color);
   align-items: center;
@@ -208,8 +219,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 50%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .footer_list_subtitle {
@@ -219,21 +231,30 @@ body {
   font-size: 1.5rem;
 }
 
-.footer_list__link {
+.footer__list__division {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer_list__image {
+  width: 5%;
+}
+
+.footer_list__link {
   font-family: var(--primary-font-family);
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--darkblue-400-thin);
   font-weight: 300;
   text-decoration: none;
   outline: none;
 }
 
-.footer_list__image {
-  width: 10%;
+.footer__copy {
+  width: 50%;
 }
+
 
 .footer__paragraph {
   font-family: var(--primary-font-family);
@@ -291,6 +312,7 @@ body {
 }
 
 @media(max-width: 375px) {
+
   /* Header */
   .header {
     margin-left: -60px;
@@ -305,7 +327,7 @@ body {
     gap: 20px;
   }
 
-  .presentation__mainContent__buttons {
+  .presentation__mainContent__buttons_division {
     flex-direction: column;
     width: 80%;
   }
@@ -320,5 +342,5 @@ body {
   .footer {
     text-align: center;
   }
-  
+
 }
