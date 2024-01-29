@@ -121,8 +121,16 @@ body {
   color: var(--terciary-color);
 }
 
+.button-blue:hover {
+  background-color: var(--darkblue-400-thin);
+}
+
 .button-gray {
   color: var(--darkblue-300);
+}
+
+.button-gray:hover {
+  background-color: var(--terciary-color);
 }
 
 .presentation__textCryptography,
