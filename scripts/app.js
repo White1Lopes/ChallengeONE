@@ -47,12 +47,9 @@ function showsTextArea(text) {
 }
 
 function copyText() {
-  // Get the text field
   var copyText = document.getElementById("cryptgraphyTextArea");
 
-  // Copy the text inside the text field
   navigator.clipboard.writeText(copyText.value);
-
 }
 
 function encrypt(text) {
