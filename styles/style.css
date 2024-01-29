@@ -274,7 +274,7 @@ body {
     padding: 0 6% 0 6%;
     margin-right: 0;
     display: flex;
-    gap: 6rem;
+    gap: 3rem;
     width: 100%;
     box-sizing: border-box;
     flex-direction: column;
@@ -329,7 +329,7 @@ body {
   }
 }
 
-@media(max-width: 430px) {
+@media(max-width: 440px) {
 
   /* Header */
   .header {
