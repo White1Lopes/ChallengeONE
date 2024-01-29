@@ -86,7 +86,7 @@ body {
 
 .presentation__mainContent__info__text {
   font-family: var(--primary-font-family);
-  font-weight: 100;
+  font-weight: 300;
   font-size: 0.75rem;
   color: var(--gray-400);
 }
