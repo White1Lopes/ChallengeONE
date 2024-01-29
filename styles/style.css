@@ -234,22 +234,17 @@ body {
 .footer__list__division {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 }
 
 .footer_list__image {
-  width: 5%;
+  width: 13.5%;
 }
 
-.footer_list__link {
-  font-family: var(--primary-font-family);
-  font-size: 1.2rem;
-  color: var(--darkblue-400-thin);
-  font-weight: 300;
-  text-decoration: none;
-  outline: none;
-}
+ .footer_list__link {
+  width: 50%;
+  text-align: center; 
+} 
 
 .footer__copy {
   width: 50%;
@@ -320,8 +315,8 @@ body {
     font-size: 1rem;
   }
   
-  .footer_list__link {
-    font-size: 0.8rem;
+  .footer_list__image {
+    width: 20%;
   }
 
   .footer__paragraph {
@@ -355,38 +350,29 @@ body {
 
   .presentation__textCryptographyAlone {
     height: 40vh;
-    /* justify-content: space-between;
-    height: 40vh;
-    padding: 0 2% 0 2%;
-    padding-bottom: 0;
-    gap: 1rem; */
   }
 
   .footer {
     text-align: center;
+    margin-top: 5%;
   }
   
   .footer_list_subtitle {
     font-size: 1rem;
   }
-  .footer__list__division {
-    flex-direction: column;
-  }
-  
-  .footer_list__link {
-    font-size: 0.8rem;
-  }
-  
-  .footer__list__division__separator {
-    display: none;
-  }
 
   .footer_list__image {
-    display: none;
+    width: 30%;
   }
 
   .footer__paragraph {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+  }
+
+  .footer__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
 
 }
